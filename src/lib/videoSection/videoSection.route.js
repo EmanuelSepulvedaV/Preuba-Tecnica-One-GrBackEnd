@@ -8,11 +8,11 @@ const { videoSection, getVideos, getVideosMedia } = require("./videoSection.cont
 
 module.exports = (app) => {
   app.use("/upload", route);
-  // Entrada de videos 
+  // Entrada de videos
   route.post("/", upload.single("video"), videoSection);
 
-  // Salida de videos 
-  route.get("/getVideos",  getVideos);
+  // Salida de videos
+  route.get("/getVideos", getVideos);
 
-  route.get("/getVideosMedia",  getVideosMedia);
+  route.get("/getVideosMedia", getVideosMedia);
 };

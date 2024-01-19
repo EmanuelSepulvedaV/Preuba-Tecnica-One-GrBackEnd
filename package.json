@@ -1,10 +1,10 @@
 {
-  "name": "back",
+  "name": "backpruebatenicaonegroup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "local": "nodemon --ignore src/assets  src/index.js"
+    "dev": "nodemon --ignore src/assets  src/index.js"
   },
   "author": "",
   "license": "ISC",
