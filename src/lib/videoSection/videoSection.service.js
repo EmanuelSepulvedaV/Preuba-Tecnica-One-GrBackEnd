@@ -51,4 +51,16 @@ module.exports = {
   getVideosMedia: async (req, res) => {
     res.sendFile(req.query.linkvideo);
   },
+
+  deleteMedia: async (req) => {
+    const contenido = fs.readFileSync(rutaArchivo, "utf-8");
+    let information = JSON.parse(contenido);
+    information.videos = information.videos.filter((e) => e.linkvideo != req.query.dir);
+    fs.writeFileSync(rutaArchivo, JSON.stringify(information, null, 2));
+
+    fs.unlink(req.query.dir, (err) => {
+      if (err) console.error(err);
+      else console.log("El video se eliminó correctamente.");
+    });
+  },
 };
