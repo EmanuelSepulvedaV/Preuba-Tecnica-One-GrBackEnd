@@ -1,4 +1,4 @@
-# Preuba Tecnica One Group BackEnd
+# Prueba Tecnica One Group BackEnd
 
 ```sh
 npm run dev
